@@ -12,6 +12,12 @@
             justify-content: space-between;
         }
 
+        .header-right,
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
         .logo-button img {
             width: 260px;
             height: 90px;
@@ -33,25 +39,29 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
+        .login-button button:hover {
             background-color: rgb(29, 29, 243);
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        
+            <div class="header-left">
             <a href="IHK_MainPage.html">
                 <button class="logo-button">
                     <img src="images/IHK_Logo.png">
                 </button>
             </a>
-            <a>
-                <button type="submit">
-                    Login
-                </button>
-            </a>
-        </nav>
+            </div>
+            <div class="header-right">
+                <a>
+                    <button class="login-button" type="submit">
+                        Login
+                    </button>
+                </a>
+            </div>
+        
     </header>
 
     <main>
