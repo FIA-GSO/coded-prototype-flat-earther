@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <head>
     <title>Berichtsheft (Ausbildungsnachweis) - IHK Köln</title>
 
@@ -9,17 +10,74 @@
 
         :root {
           --primary-blue: #50AECD;
+          --primary-grey: #D9D9D9;
         }
 
-        .navContainer{
+        .navContainer {
             width: 100%;
-            height: 200px;
-            background-color: var(--primary-blue)
+            height: auto; 
+            background-color: var(--primary-blue);
         }
 
         .imgContainer {
-            padding: 15px;
-            height: 140px
+            padding: 0.6vh;
+            height: 6vh; 
+        }
+
+        .mainContainer {
+            margin: 5%;
+        }
+
+        .input {
+            all: unset;
+            width: 100%;
+            height: 3vh;
+            text-align: center;
+            background-color: var(--primary-grey);
+        }
+
+        .Textarea {
+            all: unset;
+            width: 100%;
+            height: 6vh;
+            background-color: var(--primary-grey); 
+        }
+
+        .fontSizeMid { 
+            font-size: 1.5vh;
+        }
+
+        .fontSizeLarge { 
+            font-size: 3vh;
+        }
+
+        .customGrid {
+            display: grid; 
+            grid-auto-flow: column; 
+            gap: 1vh; 
+            align-items: center; 
+            width:100%;
+            margin-bottom: 0.5vh;
+            margin-top: 0.5vh;
+        }
+
+        .weekDisplay{
+            background-color: var(--primary-grey);
+            height: 100%;
+            width: 10%;
+            text-align: center;
+        }
+
+        .button {
+            all: unset;
+            text-align: center;
+            margin: 0.5vh;
+            height: 5vh;
+            border: 2px solid black;
+        }
+
+        main {
+            flex: 1 0 auto;
         }
     </style>
 </head>
@@ -35,11 +93,94 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="mainContainer">
+        <div class="customGrid">
+            <input class="input fontSizeMid" type="text" placeholder="Vorname">
+            <input class="input fontSizeMid" type="text" placeholder="Nachnahme">
+            <input class="input fontSizeMid" type="text" placeholder="Ausbildungsdauer">
+        </div>
+        <div  class="customGrid">
+            <input class="input fontSizeMid" type="text" placeholder="Ausb. Beginn">
+            <input class="input fontSizeMid" type="text" placeholder="Ausb. Ende">
+        </div>
+        <p class="fontSizeLarge">Ihre Tätigkeiten für Kalenderwoche 13</p>
+
+        <!-- Montag-->
+        <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div class="fontSizeLarge weekDisplay">
+                <p>M</p>
+            </div>
+            <div style="flex: 1;">
+                <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                <div class="customGrid">
+                    <input class="input fontSizeMid" type="text" placeholder="Std.">
+                    <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                </div>
+            </div>
+        </div>
+
+        <!-- Dienstag-->
+        <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div class="fontSizeLarge weekDisplay">
+                <p>D</p>
+            </div>
+            <div style="flex: 1;">
+                <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                <div class="customGrid">
+                    <input class="input fontSizeMid" type="text" placeholder="Std.">
+                    <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mittwoch-->
+        <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div class="fontSizeLarge weekDisplay">
+                <p>M</p>
+            </div>
+            <div style="flex: 1;">
+                <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                <div class="customGrid">
+                    <input class="input fontSizeMid" type="text" placeholder="Std.">
+                    <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                </div>
+            </div>
+        </div>
+
+        <!-- Donnerstag-->
+        <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div class="fontSizeLarge weekDisplay">
+                <p>D</p>
+            </div>
+            <div style="flex: 1;">
+                <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                <div class="customGrid">
+                    <input class="input fontSizeMid" type="text" placeholder="Std.">
+                    <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                </div>
+            </div>
+        </div>
+
+        <!-- Freitag-->
+        <div style="display: flex; gap: 0.5rem; align-items: center; padding-bottom: 1vh;">
+            <div class="fontSizeLarge weekDisplay">
+                <p>F</p>
+            </div>
+            <div style="flex: 1;">
+                <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                <div class="customGrid">
+                    <input class="input fontSizeMid" type="text" placeholder="Std.">
+                    <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                </div>
+            </div>
+        </div>
+
 
     </main>
     <footer>
-
+        <div class="customGrid">
+            <button class="button fontSizeMid">Abbrechen</button>
+            <button class="button fontSizeMid" style="background-color: var(--primary-blue);">Senden</button>
+        </div>
     </footer>
-
 </body>
