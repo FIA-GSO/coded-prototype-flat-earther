@@ -15,16 +15,16 @@
     }
 
     .navContainer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* vertikale Zentrierung */
-      padding: 0.6vh 2vw;
-      background-color: var(--primary-blue);
+        width: 100%;
+        height: auto; 
+        background-color: var(--primary-blue);
     }
 
     .imgContainer {
-      height: 6vh;
+        padding: 0.6vh;
+        height: 6vh; 
     }
+
 
     button {
       background-color: #fff;
@@ -142,24 +142,30 @@
 <body>
   <header>
     <nav class="navContainer">
-      <img class="imgContainer" src="images/IHK_Logo.png" alt="IHK Logo">
-      <!-- Login Button -->
-      <button onclick="openLogin()">Login</button>
+        <a href="IHK_MainPage.html">
+            <div style="display: inline;">
+                <img class="imgContainer" src="images/IHK_Logo.png" alt="">
+            </div>
+        </a>
+        <div class="imgContainer" style="float: right; display: inline;">
+                  <!-- Login Button -->
+          <button onclick="openLogin()">Login</button>
 
-      <!-- Login Popup -->
-      <div id="loginPopup" class="popup-overlay">
-      <div class="popup-content">
-          <span class="close-btn" onclick="closeLogin()">&times;</span>
-          <h2>Login</h2>
-          <form onsubmit="return checkLogin(event)">
-            <input type="text" id="email" placeholder="E-Mail" value="test@ihk.de" required>
-            <input type="password" id="password" placeholder="Passwort" value="123456" required>
-            <a href="Wochenplan.html">
-                <button type="submit">Ok</button>
-            </a>
-          </form>
-      </div>
-      </div>
+          <!-- Login Popup -->
+          <div id="loginPopup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeLogin()">&times;</span>
+                <h2>Login</h2>
+                <form onsubmit="return checkLogin(event)">
+                  <input type="text" id="email" placeholder="E-Mail" value="test@ihk.de" required>
+                  <input type="password" id="password" placeholder="Passwort" value="123456" required>
+                  <a href="Wochenplan.html">
+                      <button type="submit">Ok</button>
+                  </a>
+                </form>
+            </div>
+          </div>
+        </div>
     </nav>
   </header>
 
