@@ -41,7 +41,10 @@
     }
 
     main {
-      padding: 5%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
     }
 
     .popup-overlay {
@@ -105,14 +108,34 @@
 
     .image-row {
         display: flex;
-        gap: 20px; /* Abstand zwischen den Bildern */
-        justify-content: center; /* optional: zentriert die Bilder horizontal */
+        justify-content: center;   /* zentriert die Bilder horizontal */
+        align-items: center;       /* zentriert sie vertikal (falls nötig) */
+        gap: 20px;                 /* Abstand zwischen den Bildern */
+        margin: 20px auto;         /* Abstand oben/unten + zentriert den Container */
+        max-width: 90%;            /* optional: begrenzt die Breite */
     }
 
     .image-row img {
-        width: 300px; /* oder eine andere feste Größe */
+        max-width: 100%;
+        width: 300px;              /* feste Breite für gleichmäßige Darstellung */
         height: auto;
-        border-radius: 8px; /* optional: abgerundete Ecken */
+        border-radius: 8px;        /* optional: abgerundete Ecken */
+    }
+
+    @media (max-width: 768px) {
+        .image-row {
+            flex-direction: column; /* Bilder untereinander */
+            gap: 15px;               /* etwas Abstand zwischen den Bildern */
+        }
+
+        .image-row img {
+            width: 90%;              /* passt sich kleineren Bildschirmen an */
+            margin: 0 auto;          /* zentriert die Bilder */
+        }
+
+        main {
+            padding: 10px;
+        }
     }
   </style>
 </head>
@@ -141,15 +164,22 @@
   </header>
 
   <main>
-    <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...
-    </p>
+    <br>
     <div class="image-row">
-        <img src="bild1.png" alt="Bild 1">
-        <img src="bild2.png" alt="Bild 2">
+        <img src="images/bild1.png">
+        <img src="images/bild2.png">
     </div>
-
-
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <br><br>
+    <div class="image-row">
+        <img src="images/bild3.png">
+        <img src="images/bild4.png">
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
   </main>
 </body>
 
