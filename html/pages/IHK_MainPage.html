@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Willkommen bei der IHK</title>
   <style>
     :root {
@@ -15,16 +16,17 @@
     }
 
     .navContainer {
-        width: 100%;
-        height: auto; 
-        background-color: var(--primary-blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--primary-blue);
+      padding: 10px;
     }
 
     .imgContainer {
-        padding: 0.6vh;
-        height: 6vh; 
+      height: 6vh;
+      padding: 0.6vh;
     }
-
 
     button {
       background-color: #fff;
@@ -41,101 +43,106 @@
     }
 
     main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
+      padding: 10px;
+      text-align: center;
     }
 
     .popup-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: none; /* versteckt standardmäßig */
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
 
     .popup-content {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        width: 300px;
-        text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
     }
 
     .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 24px;
-        cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 24px;
+      cursor: pointer;
     }
 
     .popup-content form {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        background-color: var(--primary-grey); /* Hintergrund für das Formular */
-        padding: 15px;
-        border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background-color: var(--primary-grey);
+      padding: 15px;
+      border-radius: 8px;
     }
 
     .popup-content input {
-        padding: 8px;
-        border: none;
-        border-radius: 4px;
-        background-color: #f0f0f0; /* Hintergrund für Eingabefelder */
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: #f0f0f0;
     }
 
     .popup-content button[type="submit"] {
-        align-self: flex-end; /* Button nach rechts */
-        background-color: var(--primary-blue);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
+      align-self: flex-end;
+      background-color: var(--primary-blue);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     .popup-content button[type="submit"]:hover {
-        background-color: rgb(29, 29, 243);
+      background-color: rgb(29, 29, 243);
     }
 
     .image-row {
-        display: flex;
-        justify-content: center;   /* zentriert die Bilder horizontal */
-        align-items: center;       /* zentriert sie vertikal (falls nötig) */
-        gap: 20px;                 /* Abstand zwischen den Bildern */
-        margin: 20px auto;         /* Abstand oben/unten + zentriert den Container */
-        max-width: 90%;            /* optional: begrenzt die Breite */
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 90%;
+      align-items: center;
     }
 
     .image-row img {
-        max-width: 100%;
-        width: 300px;              /* feste Breite für gleichmäßige Darstellung */
-        height: auto;
-        border-radius: 8px;        /* optional: abgerundete Ecken */
+      width: 90%;
+      height: auto;
+      border-radius: 8px;
     }
 
-    @media (max-width: 768px) {
-        .image-row {
-            flex-direction: column; /* Bilder untereinander */
-            gap: 15px;               /* etwas Abstand zwischen den Bildern */
-        }
+    @media (min-width: 768px) {
+      .navContainer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
-        .image-row img {
-            width: 90%;              /* passt sich kleineren Bildschirmen an */
-            margin: 0 auto;          /* zentriert die Bilder */
-        }
+      main {
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
 
-        main {
-            padding: 10px;
-        }
+      .image-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .image-row img {
+        width: 300px;
+      }
     }
   </style>
 </head>
