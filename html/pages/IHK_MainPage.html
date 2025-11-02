@@ -193,19 +193,16 @@
   }
 
   function checkLogin(event) {
-    event.preventDefault(); // verhindert das Standard-Absenden
+    event.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Feste Testdaten
     const testEmail = "test@ihk.de";
     const testPassword = "123456";
 
     if (email === testEmail && password === testPassword) {
-      window.location.href = "zielseite.html"; // Zielseite anpassen
-    } else {
-      alert("Falsche Login-Daten!");
+      window.location.href = "wochenbericht.html";
     }
   }
 
