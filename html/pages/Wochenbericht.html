@@ -76,6 +76,11 @@
             border: 2px solid black;
         }
 
+        .error {
+            font-size: 1.5vh;
+            color: red;
+        }
+
         main {
             flex: 1 0 auto;
         }
@@ -96,84 +101,147 @@
         </nav>
     </header>
     <main class="mainContainer">
-        <form action="WochenberichtSubmit.html">
+        <form action="WochenberichtSubmit.html" id="submitForm">
             <div class="customGrid">
-                <input class="input fontSizeMid" type="text" placeholder="Vorname">
-                <input class="input fontSizeMid" type="text" placeholder="Nachnahme">
-                <input class="input fontSizeMid" type="text" placeholder="Ausbildungsdauer">
+                <div data-id="formfield">
+                    <input class="input fontSizeMid" type="text" placeholder="Vorname">
+                    <div data-id="errorField" class="error"></div>
+                </div>
+
+                <div data-id="formfield">
+                    <input class="input fontSizeMid" type="text" placeholder="Nachnahme">
+                    <div data-id="errorField" class="error"></div>
+                </div>
+
+                <div data-id="formfield">
+                    <input class="input fontSizeMid" type="text" placeholder="Ausbildungsdauer">
+                    <div data-id="errorField" class="error"></div>
+                </div>
             </div>
-            <div  class="customGrid">
-                <input class="input fontSizeMid" type="text" placeholder="Ausb. Beginn">
-                <input class="input fontSizeMid" type="text" placeholder="Ausb. Ende">
+            <div class="customGrid">
+                <div data-id="formfield">
+                    <input class="input fontSizeMid" type="text" placeholder="Ausb. Beginn">
+                    <div data-id="errorField" class="error"></div>
+                </div>
+
+                <div data-id="formfield">
+                    <input class="input fontSizeMid" type="text" placeholder="Ausb. Ende">
+                    <div data-id="errorField" class="error"></div>
+                </div>
             </div>
             <p class="fontSizeLarge">Ihre Tätigkeiten für Kalenderwoche 13</p>
 
             <!-- Montag-->
-            <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div style="display: flex; gap: 0.833vh; align-items: center;  padding-bottom: 1vh;">
                 <div class="fontSizeLarge weekDisplay">
                     <p>M</p>
                 </div>
                 <div style="flex: 1;">
-                    <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                    <div data-id="formfield">
+                        <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                        <div data-id="errorField" class="error"></div>
+                    </div>
                     <div class="customGrid">
-                        <input class="input fontSizeMid" type="text" placeholder="Std.">
-                        <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Std.">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Dienstag-->
-            <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div style="display: flex; gap: 0.833vh; align-items: center;  padding-bottom: 1vh;">
                 <div class="fontSizeLarge weekDisplay">
                     <p>D</p>
                 </div>
                 <div style="flex: 1;">
-                    <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                    <div data-id="formfield">
+                        <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                        <div data-id="errorField" class="error"></div>
+                    </div>
                     <div class="customGrid">
-                        <input class="input fontSizeMid" type="text" placeholder="Std.">
-                        <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Std.">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Mittwoch-->
-            <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div style="display: flex; gap: 0.833vh; align-items: center;  padding-bottom: 1vh;">
                 <div class="fontSizeLarge weekDisplay">
                     <p>M</p>
                 </div>
                 <div style="flex: 1;">
-                    <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                    <div data-id="formfield">
+                        <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                        <div data-id="errorField" class="error"></div>
+                    </div>
                     <div class="customGrid">
-                        <input class="input fontSizeMid" type="text" placeholder="Std.">
-                        <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Std.">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Donnerstag-->
-            <div style="display: flex; gap: 0.5rem; align-items: center;  padding-bottom: 1vh;">
+            <div style="display: flex; gap: 0.833vh; align-items: center;  padding-bottom: 1vh;">
                 <div class="fontSizeLarge weekDisplay">
                     <p>D</p>
                 </div>
                 <div style="flex: 1;">
-                    <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                    <div data-id="formfield">
+                        <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                        <div data-id="errorField" class="error"></div>
+                    </div>
                     <div class="customGrid">
-                        <input class="input fontSizeMid" type="text" placeholder="Std.">
-                        <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Std.">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Freitag-->
-            <div style="display: flex; gap: 0.5rem; align-items: center; padding-bottom: 1vh;">
+            <div style="display: flex; gap: 0.833vh; align-items: center; padding-bottom: 1vh;">
                 <div class="fontSizeLarge weekDisplay">
                     <p>F</p>
                 </div>
                 <div style="flex: 1;">
-                    <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                    <div data-id="formfield">
+                        <textarea class="Textarea fontSizeMid" placeholder="Tätigkeit"></textarea>
+                        <div data-id="errorField" class="error"></div>
+                    </div>
                     <div class="customGrid">
-                        <input class="input fontSizeMid" type="text" placeholder="Std.">
-                        <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Std.">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
+                        <div data-id="formfield">
+                            <input class="input fontSizeMid" type="text" placeholder="Abteilung">
+                            <div data-id="errorField" class="error"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,3 +259,32 @@
 
     </footer>
 </body>
+
+
+<script>
+    const submitForm = document.getElementById('submitForm').addEventListener('submit', function(event) {
+        if(!validateFields()) {
+            event.preventDefault();
+            console.log("preventet send");
+        }
+    });
+
+    function validateFields() {
+        let pass = true;
+        let formfields = document.querySelectorAll('[data-id="formfield"]');
+
+        for (let fromfield of formfields) {
+            formInput = fromfield.children[0]
+            formerror = fromfield.children[1]
+
+            formInput.style.border = '';
+            if(formInput.value === "") {
+                pass = false;
+                formInput.style.border = '2px solid red';
+                formerror.innerHTML = 'Bitte Füllen sie dieses feld aus.';
+            }
+        }
+
+        return pass;
+    }
+</script>
