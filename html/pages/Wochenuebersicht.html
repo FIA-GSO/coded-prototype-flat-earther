@@ -99,17 +99,24 @@
         /* Date boxes */
         .date-box {
             background-color: var(--primary-grey);
-            color: white;
             padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .date-circle {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-blue);
+        .date-circle-green {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .date-circle-red {
+            width: 20px;
+            height: 20px;
+            background-color: red;
             border-radius: 50%;
             flex-shrink: 0;
         }
@@ -137,22 +144,22 @@
 
         <div class="date-box">
         <span>von datum - bis datum</span>
-        <div class="date-circle"></div>
+        <div class="date-circle-green"></div>
         </div>
 
         <div class="date-box">
         <span>von datum - bis datum</span>
-        <div class="date-circle"></div>
+        <div class="date-circle-green"></div>
         </div>
 
         <div class="date-box">
         <span>von datum - bis datum</span>
-        <div class="date-circle"></div>
+        <div class="date-circle-green"></div>
         </div>
 
         <div class="date-box">
         <span>von datum - bis datum</span>
-        <div class="date-circle"></div>
+        <div class="date-circle-red"></div>
         </div>
     </main>
 </body>
