@@ -286,6 +286,7 @@
             formerror = fromfield.children[1]
 
             formInput.style.border = '';
+            formerror.innerHTML = ''
             if(formInput.value === "") {
                 pass = false;
                 formInput.style.border = '2px solid red';
