@@ -8,11 +8,13 @@
     <style>
         body{
             margin: 0;
+            font-family: sans-serif;
         }
 
         :root {
           --primary-blue: #50AECD;
           --primary-grey: #D9D9D9;
+          --dark-blue: #005A8C;
         }
 
         .navContainer {
@@ -76,6 +78,15 @@
             margin: 0.5vh;
             height: 5vh;
             border: 2px solid black;
+        }
+
+        .submitButton {
+            background-color: var(--primary-blue);
+        }
+        
+        .button:hover {
+            background-color: var(--dark-blue);
+            cursor: pointer;
         }
 
         .error {
@@ -259,7 +270,7 @@
 
             <div class="customGrid">
                 <button class="button fontSizeMid">Abbrechen</button>
-                <input type="submit" class="button fontSizeMid" style="background-color: var(--primary-blue);"></input>
+                <input type="submit" class="submitButton button fontSizeMid"></input>
             </div>
         </form>
        
